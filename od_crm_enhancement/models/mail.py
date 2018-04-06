@@ -16,6 +16,7 @@ class MailFollowers(models.Model):
         """
         generic = []
         specific = {}
+        # Check context and by pass autofollow up on record
         if 'mail_post_autofollow' in self._context and self._context.get(
                 'mail_post_autofollow'):
             return generic, specific
@@ -25,6 +26,7 @@ class MailFollowers(models.Model):
         p_exist = {}  # {partner_id: res_ids}
         c_exist = {}  # {channel_id: res_ids}
 
+        # Search existing followers to record
         followers = self.sudo().search([
             '&',
             '&', ('res_model', '=', res_model), ('res_id', 'in', res_ids),
@@ -47,6 +49,7 @@ class MailFollowers(models.Model):
             self.env['mail.message.subtype'].default_subtypes(res_model)
 
         if force_mode:
+            # Search employee list from Users
             employee_pids = self.env['res.users'].sudo().search(
                 [('partner_id', 'in', list(partner_data)),
                  ('share', '=', False)]).mapped('partner_id').ids
@@ -63,6 +66,7 @@ class MailFollowers(models.Model):
         # create new followers, batch ok
         gen_new_pids = [pid for pid in partner_data if pid not in p_exist]
         gen_new_cids = [cid for cid in channel_data if cid not in c_exist]
+        # Prepare list to update record with followers
         for pid in gen_new_pids:
             generic.append([0, 0, {'res_model': res_model, 'partner_id': pid,
                                    'subtype_ids': [(6, 0, partner_data.get(

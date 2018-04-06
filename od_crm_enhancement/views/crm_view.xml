@@ -9,12 +9,15 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
+            <!-- stage_id_3 field useful for hide/visible button -->
             <field name="partner_id" position="after">
                 <field name="stage_id_3" invisible="1"/>
             </field>
+            <!-- Mark won button will be display when stage is proposition -->
             <button name="action_set_won" position="attributes">
                 <attribute name="attrs">{'invisible': [('stage_id_3', '=', True)]}</attribute>
             </button>
+            <!-- Mark lost button will be display when stage is proposition -->
             <button name="%(crm.crm_lead_lost_action)d" position="attributes">
                 <attribute name="attrs">{'invisible': [('stage_id_3', '=', True)]}</attribute>
             </button>
