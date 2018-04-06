@@ -10,3 +10,9 @@
 #, python-format
 msgid "Done & Schedule Next"
 msgstr "Erledigt und Folgeaktivität planen"
+
+#. module: calendar
+#: model:ir.ui.view,arch_db:calendar.view_calendar_event_form
+#: model:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
+msgid "Document"
+msgstr "Zum Auftrag"
