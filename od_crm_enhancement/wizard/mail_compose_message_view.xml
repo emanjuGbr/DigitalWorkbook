@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Copyright 2018 Emanju.de
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+    <!-- Mail compose wizard form view -->
+    <record id="email_compose_message_wizard_follower_  form" model="ir.ui.view">
+        <field name="name">mail.compose.message.form</field>
+        <field name="model">mail.compose.message</field>
+        <field name="inherit_id" ref="mail.email_compose_message_wizard_form"/>
+        <field name="arch" type="xml">
+            <!-- Pass context to get help into restrict external contacts as well as folloup -->
+            <field name="partner_ids" position="attributes">
+                <attribute name="context">{'force_email':True, 'show_email':True, 'composition_mode': composition_mode}</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
