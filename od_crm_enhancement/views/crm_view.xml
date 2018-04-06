@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Copyright 2018 Emanju.de
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+    <!-- CRM form view -->
+    <record id="crm_case_form_view_oppor_button" model="ir.ui.view">
+        <field name="name">crm.lead.form.opportunity</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="stage_id_3" invisible="1"/>
+            </field>
+            <button name="action_set_won" position="attributes">
+                <attribute name="attrs">{'invisible': [('stage_id_3', '=', True)]}</attribute>
+            </button>
+            <button name="%(crm.crm_lead_lost_action)d" position="attributes">
+                <attribute name="attrs">{'invisible': [('stage_id_3', '=', True)]}</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>
