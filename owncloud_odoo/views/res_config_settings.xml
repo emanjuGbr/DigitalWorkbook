@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.owncloud</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="100"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Owncloud" string="Owncloud" data-key="owncloud">
+                    <button string="Test and confirmed"
+                            name="action_test_owncloud"
+                            type="object"
+                            attrs="{'invisible': [('owncloud_state', '=', 'confirmed')]}"
+                            class="oe_highlight"
+                            style="margin-left: 5px;"
+                    />
+                    <button string="Reset"
+                            name="action_reset_owncloud"
+                            type="object"
+                            attrs="{'invisible': [('owncloud_state', '=', 'draft')]}"
+                            class="oe_highlight"
+                            confirm="Are you sure? Please take into account that if you changed the root directory, all new files would be stored there, but old ones will be still kept in the previous folder."
+                            style="margin-left: 5px;"
+                    />
+                    <button string="Sync to Owncloud"
+                            name="action_sync_to_owncloud"
+                            type="object"
+                            attrs="{'invisible': [('owncloud_state', '=', 'draft')]}"
+                            class="oe_highlight"
+                            confirm="In order to prevent data corruption, please make sure the synchronization process will not be interrupted."
+                            style="margin-left: 5px;"
+                    />
+                    <button string="Sync from Owncloud"
+                            name="action_sync_from_owncloud"
+                            type="object"
+                            attrs="{'invisible': [('owncloud_state', '=', 'draft')]}"
+                            class="oe_highlight"
+                            confirm="In order to prevent data corruption, please make sure the synchronization process will not be interrupted."
+                            style="margin-left: 5px;"
+                    />
+                    <h2>Owncloud</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <group>
+                                <field name="owncloud_state" readonly="1" />
+                                <field name="owncloud_url"
+                                       attrs="{'readonly': [('owncloud_state', '=', 'confirmed')]}"
+                                />
+                                <field name="owncloud_login"
+                                       attrs="{'readonly': [('owncloud_state', '=', 'confirmed')]}"
+                                />
+                                <field name="owncloud_password"
+                                       password="True"
+                                       attrs="{'readonly': [('owncloud_state', '=', 'confirmed')]}"
+                                />
+                                <field name="owncloud_root_dir"
+                                       attrs="{'readonly': [('owncloud_state', '=', 'confirmed')]}"
+                                       help="If you changed the root directory, all new files would be stored there, but old ones will be still kept in the previous folder."
+                                />
+                                <div style="color: red;"
+                                     attrs="{'invisible': [('owncloud_state', '=', 'confirmed')]}"
+                                >
+                                    If you changed the root directory, all new files would be stored there, but old ones will be still kept in the previous folder.
+                                </div>
+                            </group>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="owncloud_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'owncloud'}</field>
+    </record>
+
+    </data>
+</odoo>
