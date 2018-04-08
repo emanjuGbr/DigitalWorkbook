@@ -49,7 +49,7 @@
     'post_load': 'post_load',
     'uninstall_hook': 'uninstall_hook',
     'external_dependencies': {
-        'python': ['owncloud', 'six'],
+        'python': ['six'],
     },
 
 }

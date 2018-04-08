@@ -1,3 +1,2 @@
 pyocclient
-owncloud
 six
