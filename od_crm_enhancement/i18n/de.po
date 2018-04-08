@@ -16,3 +16,10 @@ msgstr "Erledigt und Folgeaktivität planen"
 #: model:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
 msgid "Document"
 msgstr "Zum Auftrag"
+
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.crm_menu_root
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid "CRM"
+msgstr "Auftragsverwaltung"
