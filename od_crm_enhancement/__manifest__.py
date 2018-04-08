@@ -16,10 +16,5 @@
         "data/crm_stage_data.xml"
     ],
 
-      # only loaded in demonstration mode
-    'demo': [
-        'data/crm_lead_demo.xml',
-    ],
-
     "installable": True,
 }
