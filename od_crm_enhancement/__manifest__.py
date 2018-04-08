@@ -13,7 +13,6 @@
     "data": [
         "views/crm_view.xml",
         "wizard/mail_compose_message_view.xml",
-        "data/crm_stage_data.xml"
     ],
 
     "installable": True,
