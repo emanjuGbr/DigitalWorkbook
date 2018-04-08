@@ -24,6 +24,80 @@ msgstr "Zum Auftrag"
 msgid "CRM"
 msgstr "Aufträge"
 
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:22
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
+#: model:crm.stage,name:crm.stage_lead1
+#, python-format
+msgid "New"
+msgstr "Neue Anfrage"
+
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:14
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
+#: model:crm.stage,name:crm.stage_lead2
+#, python-format
+msgid "Consulting"
+msgstr "Beratung"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
+#: model:crm.stage,name:crm.stage_leadQuotationCreation
+#, python-format
+msgid "Quotation creation"
+msgstr "Angebotserstellung"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
+#: model:crm.stage,name:crm.stage_lead3
+#, python-format
+msgid "Order confirmation"
+msgstr "Angebotsannahme"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
+#: model:crm.stage,name:crm.stage_leadProduction
+#, python-format
+msgid "Production"
+msgstr "Einbau"
+
+. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
+#: model:crm.stage,name:crm.stage_leadInvoice
+#, python-format
+msgid "Invoice"
+msgstr "Rechnung"
+
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/models/crm_lead.py:1085
+#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#: code:addons/crm/static/src/js/web_planner_crm.js:22
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
+#: model:crm.stage,name:crm.stage_lead4
+#: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+#, python-format
+msgid "Won"
+msgstr "Erfolgreich"
+
+
+
+
 #. module: mail
 #: model:mail.template,body_html:mail.mail_template_data_notification_email_default
 msgid ""
