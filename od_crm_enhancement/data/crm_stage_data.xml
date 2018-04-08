@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
- 
+    <record model="crm.stage" id="stage_lead1">
+    <field name="inherit_id" ref="crm.stage_lead1"/>
+    <field name="arch" type="xml">
+        <field name="name" position="replace">
+            <field name="name">Newer</field>
+        </field>
+    </record>
 
        <record model="crm.stage" id="stage_leadProduction">
         <field name="name">Production</field>
