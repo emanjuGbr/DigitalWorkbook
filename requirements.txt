@@ -1,2 +1,3 @@
-pyocclient
-six
+onedrivesdk
+requests
+asyncio
