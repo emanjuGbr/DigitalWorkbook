@@ -14,6 +14,7 @@
         "mail",
         "crm",
         "hr",
+        "onedrive",
     ],
     "data": [
     ],
