@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="onedrive_config_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.onedrive</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Onedrive" string="Onedrive" data-key="onedrive">
+                <!-- <form string="Onedrive settings" class="oe_form_configuration"> -->
+                    <!-- <header> -->
+                    <button name="execute"
+                            type="object"
+                            string="Save"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('onedrive_config_state', '=', 'confirmed')]}"
+                            />
+                    <button name="login_to_onedrive"
+                            string="Login and Confirm"
+                            type="object"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('onedrive_config_state', '=', 'confirmed')]}"
+                            />
+                    <button name="sync_to_onedrive"
+                            string="Sync to Onedrive"
+                            type="object"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('onedrive_config_state', '!=', 'confirmed')]}"
+                            />
+                    <button name="sync_from_onedrive"
+                            string="Update from Onedrive"
+                            type="object"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('onedrive_config_state', '!=', 'confirmed')]}"
+                            />
+                    <button name="reset"
+                            type="object"
+                            attrs="{'invisible': [('onedrive_config_state', '=', 'draft')]}"
+                            class="oe_highlight"
+                            confirm="Are you sure? Please take into account that if you changed the root directory, all new files would be stored there, but old ones will be still kept in the previous folder."
+                            style="margin-left: 5px;"
+                            string="Reset"
+                            />
+                    <button name="cancel"
+                            type="object"
+                            string="Cancel"
+                            class="oe_link"
+                            />
+                    <!-- </header> -->
+                    <h2>Onedrive</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+
+                            <group>
+                                <field name="onedrive_config_state" readonly="1"/>
+                                <field name="onedrive_client_secret"
+                                       attrs="{'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       />
+                                <field name="onedrive_client_id"
+                                       attrs="{'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       />
+                                <field name="onedrive_redirect_uri"
+                                       attrs="{'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       />
+                                <field name="onedrive_business"
+                                       attrs="{'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       />
+                                <field name="onedrive_sharepoint_sites"
+                                       attrs="{'invisible': [('onedrive_business', '=', False)], 'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       />
+                                <field name="onedrive_sharepoint_base_url"
+                                       attrs="{'invisible': [('onedrive_sharepoint_sites', '=', False)], 'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       placeholder="https://company.sharepoint.com/"
+                                       />
+                                <field name="onedrive_sharepoint_site_name"
+                                       attrs="{'invisible': [('onedrive_sharepoint_sites', '=', False)], 'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       placeholder="devapp"
+                                       />
+                                <field name="onedrive_sharepoint_drive"
+                                       attrs="{'invisible': [('onedrive_sharepoint_sites', '=', False)], 'readonly': [('onedrive_config_state', '=', 'confirmed')]}"
+                                       placeholder="Documents"
+                                       />
+                            </group>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="onedrive_config_action" model="ir.actions.act_window">
+        <field name="name">Onedrive config action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+
+
+</odoo>
