@@ -14,6 +14,7 @@
         "mail",
         "crm",
         "hr",
+        "od_crm_enhancement",
     ],
     "data": [
     ],
