@@ -1,7 +1,56 @@
 # Copyright (C) 2018 - TODAY, Emanju.de
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, models
+import logging
+import re
+import string
+
+from odoo import models, fields, api, registry
+
+try:
+    from odoo.addons.onedrive.onedrive_service import onedrivesdk
+except ImportError:
+    pass  # ImportError logged in onedrive_service
+
+_logger = logging.getLogger(__name__)
+
+
+def increment_name_counter(s):
+    """Handle duplicated names"""
+    s = s.split('.')
+    if len(s) > 1:
+        name, ext = '.'.join(s[:-1]), '.' + s[-1]
+    else:
+        name, ext = s[-1], ''
+    counter = int((re.findall(r'\((\d+)\)$', name) + ['0'])[0])
+    name = re.sub(r' \(\d+\)', '', name)
+    res = '{} ({}){}'.format(name, counter + 1, ext)
+    return res
+
+
+def remove_illegal_characters(s):
+    valid_chars = set("-_.() {}{}".format(string.ascii_letters, string.digits))
+    return ''.join(filter(lambda c: c in valid_chars, s))
+
+
+def mkdir(client, drive, parent, name):
+    """Make directory on onedrive"""
+    _logger.debug(
+        'Trying to create directory with name "%s" in "%s" on drive "%s"',
+        name, parent, drive,
+    )
+    if isinstance(parent, str):
+        parent = client.item(drive=drive, id=parent)
+    existing = {i.name for i in parent.children.get()}
+    name = remove_illegal_characters(name)
+    while name in existing:
+        name = increment_name_counter(name)
+    i = onedrivesdk.Item()
+    i.name = name
+    i.folder = onedrivesdk.Folder()
+    res = parent.children.add(i)
+    _logger.debug('Directory created with id "%s"', res.id)
+    return res.id
 
 
 class CRMLead(models.Model):
