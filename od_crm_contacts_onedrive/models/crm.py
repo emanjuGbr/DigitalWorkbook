@@ -8,7 +8,7 @@ import string
 from odoo import models, fields, api, registry
 
 try:
-    from odoo.addons.onedrive.onedrive_service import onedrivesdk
+    from .onedrive.onedrive_service import onedrivesdk
 except ImportError:
     pass  # ImportError logged in onedrive_service
 
@@ -105,7 +105,8 @@ class CRMLead(models.Model):
         if obj:
             return client.item(id=obj.onedrive_id)
 
-        res = mkdir(client, drive, model_dir_id, self.id)
+        name = '{} {}'.format(self.name_get()[0][1], self.id)
+        res = mkdir(client, drive, model_dir_id, name)
 
         values = {
             'name': 'crm.lead',
