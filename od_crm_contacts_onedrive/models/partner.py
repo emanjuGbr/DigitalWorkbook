@@ -128,8 +128,7 @@ class ResPartner(models.Model):
         root_dir = self.find_or_create_root_directory(Client)
         model_dir = self.find_or_create_model_directory(Client, root_dir)
         object_dir = self.find_or_create_object_directory(Client, model_dir)
-        path = Client.item(
-            id=object_dir.id).create_link('view').post().link.web_url
+        path = object_dir.create_link('view').post().link.web_url
         return {
             'type': 'ir.actions.act_url',
             'url': path,
