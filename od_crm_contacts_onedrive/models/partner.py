@@ -8,7 +8,7 @@ import string
 from odoo import models, fields, api, registry
 
 try:
-    from .onedrive.onedrive_service import onedrivesdk
+    import onedrivesdk
 except ImportError:
     pass  # ImportError logged in onedrive_service
 
