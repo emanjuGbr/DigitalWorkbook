@@ -131,5 +131,5 @@ class CRMLead(models.Model):
         return {
             'type': 'ir.actions.act_url',
             'url': path,
-            'target': 'new',
+            'target': 'self',
         }
