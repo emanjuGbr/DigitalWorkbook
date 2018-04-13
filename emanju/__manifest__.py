@@ -15,6 +15,7 @@
         "crm",
         "hr",
         "od_crm_enhancement",
+        "onedrive",
         "od_crm_contacts_onedrive",
     ],
     "data": [

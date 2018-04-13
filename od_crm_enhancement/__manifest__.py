@@ -9,7 +9,7 @@
     "author": "Bhavesh Odedra, Emanju",
     "category": "CRM",
     "website": "emanju.de",
-    "depends": ["emanju"],
+    "depends": ["crm"],
     "data": [
         "views/crm_view.xml",
         "wizard/mail_compose_message_view.xml",
