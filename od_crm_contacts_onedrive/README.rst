@@ -16,7 +16,8 @@ Installation
 Configuration
 =============
 
-* No specific configuration step required.
+Follow the configuration of the used OneDrive Odoo connector:
+https://www.odoo.com/apps/modules/11.0/onedrive/
 
 Usage
 =====
