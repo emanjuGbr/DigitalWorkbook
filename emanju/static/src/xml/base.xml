@@ -38,7 +38,7 @@
         <div class="o_no_result">No result</div>
     </t>
     <div class="o_application_switcher_footer">
-        <img src="/emanju/static/src/img/logo.svg" style="width: 150px;"/>
+        <img src="/emanju/static/src/img/logo.svg" style="width: 200px;"/>
     </div>
 </t>
 
