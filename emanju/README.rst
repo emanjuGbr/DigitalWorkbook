@@ -9,6 +9,14 @@ Emanju Odoo
 This module provides the scope (dependencies), configuration and data of Odoo
 for Emanju.
 
+It will debraning with following:
+
+* Background color (Gray),
+* Front bottom footer Image logo,
+* Orange hover effects on menu items,
+* Hide Documentation, Support, My Odoo.com account menus and
+* Web tour animated symbol color change from gray to orange.
+
 Installation
 ============
 
