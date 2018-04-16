@@ -14,8 +14,9 @@ It will debraning with following:
 * Background color (Gray),
 * Front bottom footer Image logo,
 * Orange hover effects on menu items,
-* Hide Documentation, Support, My Odoo.com account menus and
-* Web tour animated symbol color change from gray to orange.
+* Hide Documentation, Support, My Odoo.com account menus,
+* Web tour animated symbol color change from gray to orange and
+* Hide 'Power by Odoo' from login page.
 
 Installation
 ============

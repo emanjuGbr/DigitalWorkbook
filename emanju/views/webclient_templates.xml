@@ -29,4 +29,15 @@
             <link rel="stylesheet" href="/emanju/static/src/less/tip.less"/>
         </xpath>
     </template>
+
+    <!-- Disable Power by odoo from login page -->
+    <template id="login_layout" name="Login Layout" inherit_id="web.login_layout">
+         <xpath expr="//div[@t-if='not disable_footer']" position="replace">
+            <div class="text-center" t-if="not disable_footer">
+                <t t-if="not disable_database_manager">
+                    <a class="" href="/web/database/manager">Manage Databases</a>
+                </t>
+            </div>
+        </xpath>
+    </template>
 </odoo>
