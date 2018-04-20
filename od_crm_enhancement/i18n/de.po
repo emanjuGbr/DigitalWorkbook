@@ -23,3 +23,10 @@ msgstr "Zum Auftrag"
 #: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "CRM"
 msgstr "Aufträge"
+
+
+#. module: od_crm_contacts_onedrive
+#: model:crm_case_form_view_oppor_onedrive_redirect_button
+#: model:view_partner_form__onedrive_redirect_button
+msgid "Attachment(s)"
+msgstr "Anhänge"
