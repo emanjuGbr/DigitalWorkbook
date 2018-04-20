@@ -12,7 +12,7 @@
             <!-- Add Attachments button -->
             <sheet position="before">
                 <header>
-                    <button name="redirect_onedrive_folder" string="Attachment(s)" type="object" class="oe_highlight"/>
+                    <button name="redirect_onedrive_folder" string="Anhänge" type="object" class="oe_highlight"/>
                 </header>
             </sheet>
         </field>
