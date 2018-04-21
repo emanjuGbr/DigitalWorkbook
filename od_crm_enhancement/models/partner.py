@@ -1,7 +1,7 @@
 # Copyright (C) 2018 - TODAY, Emanju.de
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, models
+from odoo import api, models, fields
 
 
 class ResPartner(models.Model):
@@ -52,3 +52,15 @@ class ResPartner(models.Model):
                                                    offset=offset,
                                                    limit=limit,
                                                    order=order)
+
+    @api.model
+    def _get_default_country(self):
+        country = self.env['res.country'].search(
+            [('code', '=', 'DE')], limit=1)
+        return country
+
+    country_id = fields.Many2one(
+        'res.country',
+        string='Country',
+        default=_get_default_country
+    )
