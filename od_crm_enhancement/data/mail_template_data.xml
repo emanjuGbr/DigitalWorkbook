@@ -14,9 +14,11 @@
             <field name="lang">${object.partner_id.lang or 'de_DE'}</field>
             <field name="body_html"><![CDATA[
             <p>
-				Dear All,
-			</p><br/>
+                Dear All,
+            </p><br/>
             <p>
-                Glad to kick-off a meeting with very committed and professional team members like you, hope we can collaborate together to achieve the goals, learn from each other and add a great value to the product and the organization.</p>]]></field>
+                Glad to kick-off a meeting with very committed and professional team members like you, hope we can collaborate together to achieve the goals, learn from each other and add a great value to the product and the organization.
+            </p>
+            ]]></field>
         </record>
 </odoo>
