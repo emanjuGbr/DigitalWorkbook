@@ -11,7 +11,7 @@
         <field name="arch" type="xml">
             <!-- Add Attachments button -->
             <button name="action_set_won" position="before">
-                <button name="redirect_onedrive_folder" string="Attachment(s)" type="object" class="oe_highlight"/>
+                <button name="redirect_onedrive_folder" string="Anhänge" type="object" class="oe_highlight"/>
             </button>
         </field>
     </record>
