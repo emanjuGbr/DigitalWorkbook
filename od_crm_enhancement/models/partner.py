@@ -64,15 +64,3 @@ class ResPartner(models.Model):
         string='Country',
         default=_get_default_country
     )
-    
-        @api.model
-    def _get_default_language(self):
-        lang = self.env['res.lang'].search(
-            [('code', '=', 'DE')], limit=1)
-        return lang
-
-    lang = fields.Many2one(
-        'res.lang',
-        string='Language',
-        default=_get_default_language
-    )
