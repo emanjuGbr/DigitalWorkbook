@@ -14,6 +14,7 @@
         "views/crm_view.xml",
         "wizard/mail_compose_message_view.xml",
         "views/res_partner_view.xml",
+        "views/res_users_view.xml",
     ],
     "installable": True,
 }
