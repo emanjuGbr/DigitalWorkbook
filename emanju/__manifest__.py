@@ -18,8 +18,6 @@
         "web_tour",
         "web_enterprise",
         "od_crm_enhancement",
-        "onedrive",
-        "od_crm_contacts_onedrive",
     ],
     "data": [
         "views/webclient_templates.xml",

@@ -30,3 +30,29 @@ class CRMLead(models.Model):
                 # Assign channel leader to salesperson
                 vals.update({'user_id': team.user_id.id})
         return super(CRMLead, self).create(vals)
+
+    @api.model
+    def read_group(self, domain, fields, groupby, offset=0, limit=None,
+                   orderby=False, lazy=True):
+        # Load data from Kanban view
+        if 'search_default_partner_id' in self._context:
+            domain += ['|', ('active', '=', True), ('active', '=', False)]
+        return super(CRMLead, self).read_group(domain,
+                                               fields,
+                                               groupby,
+                                               offset=offset,
+                                               limit=limit,
+                                               orderby=orderby)
+
+    @api.model
+    def search_read(self, domain=None, fields=None, offset=0, limit=None,
+                    order=None):
+        # Load data from list view
+        if 'search_default_partner_id' in self._context:
+            domain += ['|', ['active', '=', True], ['active', '=', False]]
+        return super(CRMLead, self).search_read(domain=domain,
+                                                fields=fields,
+                                                offset=offset,
+                                                limit=limit,
+                                                order=order)
+

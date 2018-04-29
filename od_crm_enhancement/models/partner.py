@@ -53,6 +53,7 @@ class ResPartner(models.Model):
                                                    limit=limit,
                                                    order=order)
 
+
     @api.model
     def _get_default_country(self):
         country = self.env['res.country'].search(
@@ -64,3 +65,16 @@ class ResPartner(models.Model):
         string='Country',
         default=_get_default_country
     )
+
+    @api.multi
+    def _compute_opportunity_count(self):
+        # Recompute opportunity count
+        for partner in self:
+            # the opportunity count should counts the opportunities of this \
+            #company and all its contacts
+            operator = 'child_of' if partner.is_company else '='
+            partner.opportunity_count = self.env['crm.lead'].search_count(
+                [('partner_id', operator, partner.id),
+                 ('type', '=', 'opportunity'),
+                 '|', ('active', '=', False), ('active', '=', True)])
+
