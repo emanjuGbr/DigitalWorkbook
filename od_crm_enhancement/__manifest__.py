@@ -12,6 +12,7 @@
     "depends": ["crm"],
     "data": [
         "views/crm_view.xml",
+        "views/mail_templates_chatter.xml",
         "wizard/mail_compose_message_view.xml",
         "views/res_partner_view.xml",
     ],

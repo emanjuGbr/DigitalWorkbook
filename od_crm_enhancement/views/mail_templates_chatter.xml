@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Copyright 2018 Emanju.de
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+    <template id="mail_chatter_assets_backend" name="mail extended assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/od_crm_enhancement/static/src/js/chatter.js"></script>
+        </xpath>
+    </template>
+</odoo>
