@@ -1,0 +1,25 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mail
+# 
+# Translators:
+# Bhavesh Odedra <odedra@emanju.de>, 2018
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/xml/activity.xml:77
+#, python-format
+msgid "Done & Schedule Next"
+msgstr "Erledigt und Folgeaktivität planen"
+
+#. module: calendar
+#: model:ir.ui.view,arch_db:calendar.view_calendar_event_form
+#: model:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
+msgid "Document"
+msgstr "Zum Auftrag"
+
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.crm_menu_root
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid "CRM"
+msgstr "Aufträge"

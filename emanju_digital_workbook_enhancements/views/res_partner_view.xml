@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Copyright 2018 Emanju.de
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+    <!-- Partner form view -->
+    <record id="res_partner_form_view_oppor_button" model="ir.ui.view">
+        <field name="name">res.partner.form.opportunity</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="crm.view_partners_form_crm1"/>
+        <field name="arch" type="xml">
+            <button name="%(crm.crm_lead_opportunities)d" position="attributes">
+                <attribute name="domain">['|', ('active', '=', True), ('active', '=', False)]</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>
