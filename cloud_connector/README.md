@@ -1,4 +1,3 @@
-======================
 Emanju Cloud Connector
 ======================
 
@@ -14,9 +13,8 @@ Following technical modules were provided by Odootools.com
 Following module holds custom development to provide OneDrive connector functionallity
 - attachements_Button
 
-
-============
 Requirements
+============
 
 - Requirement: 022: Add OneDrive Connector
 - Requirement: 015 & 016 : Attachment button move
