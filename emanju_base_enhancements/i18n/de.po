@@ -17,9 +17,75 @@ msgstr "Erledigt und Folgeaktivität planen"
 msgid "Document"
 msgstr "Zum Auftrag"
 
-
 #. module: crm
 #: model:ir.ui.menu,name:crm.crm_menu_root
 #: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "CRM"
 msgstr "Aufträge"
+
+#. module: mail
+#: model:ir.ui.view,arch_db:mail.mail_activity_view_form_popup
+msgid "Schedule"
+msgstr "Speichern"
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/xml/client_action.xml
+#: code:addons/mail/static/src/js/chat_manager.js
+#: code:addons/mail/static/src/xml/thread.xml
+#, python-format
+msgid "New messages"
+msgstr "Neue Nachricht"
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/xml/client_action.xml:11
+#, python-format
+msgid "Odoo needs your permission to"
+msgstr "emanju benötigt Erlaubnis für"
+
+
+#. module: od_crm_contacts_onedrive
+#: model:ir.ui.view,arch_db:od_crm_contacts_onedrive.crm_case_form_view_oppor_onedrive_redirect_button
+#: model:ir.ui.view,arch_db:od_crm_contacts_onedrive.view_partner_form__onedrive_redirect_button
+msgid "Attachment(s)"
+msgstr "Anhänge"
+
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Activities Todo"
+msgstr "Aktivitäten To-Do"
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/xml/client_action.xml
+#: code:addons/mail/static/src/js/chat_manager.js
+#: code:addons/mail/static/src/xml/thread.xml
+#, python-format
+msgid "New messages"
+msgstr "Neue Nachricht"
+
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/js/core/dialog.js
+#, python-format
+msgid "Odoo"
+msgstr "emanju"
+
+
+#. module: web_settings_dashboard
+#. openerp-web
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml
+#, python-format
+msgid "Odoo"
+msgstr "emanju"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml
+#, python-format
+msgid "Odoo"
+msgstr "emanju"
+
+
