@@ -104,3 +104,15 @@ msgstr "Anrufen"
 msgid "Todo"
 msgstr "Aufgabe"
 
+
+#. module: emanju_base_enhancements
+#. openerp-web
+#: code:addons/models/users.py
+#, python-format
+msgid "Policy on how to handle Chatter notifications:\n"
+             "- On: Enable to receive messages in the inbox for new meeting "
+             "invitations)\n"
+             "- Off: Disable to receive messages in the inbox for new meeting "
+             "invitations)"
+msgstr "Richtlinie wie Benachrichtigungen gehandhabt werde...."
+
