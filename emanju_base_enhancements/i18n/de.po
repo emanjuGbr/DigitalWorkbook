@@ -89,3 +89,18 @@ msgid "Odoo"
 msgstr "emanju"
 
 
+#. module: mail
+#. openerp-web
+#: code:addons/mail/data/mail_activity_data.xml:9
+#, python-format
+msgid "Call"
+msgstr "Anrufen"
+
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/data/mail_activity_data.xml:18
+#, python-format
+msgid "Todo"
+msgstr "Aufgabe"
+
