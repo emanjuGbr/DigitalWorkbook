@@ -107,7 +107,7 @@ msgstr "Aufgabe"
 
 #. module: emanju_base_enhancements
 #. openerp-web
-#: code:addons/models/users.py
+#: code:addons/models/users.py:14
 #, python-format
 msgid "Policy on how to handle Chatter notifications:\n"
              "- On: Enable to receive messages in the inbox for new meeting "
