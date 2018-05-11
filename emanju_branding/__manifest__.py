@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Emanju Odoo",
+    "name": "Emanju branding",
     "summary": "provides the scope (dependencies), configuration and data of "
                "Odoo",
     "version": "11.0.1.0.0",
