@@ -1,108 +1,65 @@
-msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"X-Generator: Poedit 2.0.7\n"
-
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * mail
+#	* emanju_base_enhancements
 #
-# Translators:
-# Bhavesh Odedra <odedra@emanju.de>, 2018
-#. module: mail
-#. openerp-web
-#: code:addons/mail/static/src/xml/activity.xml:77
-#, python-format
-msgid "Done & Schedule Next"
-msgstr "Erledigt und Folgeaktivität planen"
-
-#. module: calendar
-#: model:ir.ui.view,arch_db:calendar.view_calendar_event_form
-#: model:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
-msgid "Document"
-msgstr "Zum Auftrag"
-
-#. module: crm
-#: model:ir.ui.menu,name:crm.crm_menu_root
-#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
-msgid "CRM"
-msgstr "Aufträge"
-
-#. module: mail
-#: model:ir.ui.view,arch_db:mail.mail_activity_view_form_popup
-msgid "Schedule"
-msgstr "Speichern"
-
-#. module: mail
-#. openerp-web
-#: code:addons/mail/static/src/xml/client_action.xml
-#: code:addons/mail/static/src/js/chat_manager.js
-#: code:addons/mail/static/src/xml/thread.xml
-#, python-format
-msgid "New messages"
-msgstr "Neue Nachricht"
-
-#. module: mail
-#. openerp-web
-#: code:addons/mail/static/src/xml/client_action.xml:11
-#, python-format
-msgid "Odoo needs your permission to"
-msgstr "Emanju benötigt Erlaubnis für"
-
-#. module: od_crm_contacts_onedrive
-#: model:ir.ui.view,arch_db:od_crm_contacts_onedrive.crm_case_form_view_oppor_onedrive_redirect_button
-#: model:ir.ui.view,arch_db:od_crm_contacts_onedrive.view_partner_form__onedrive_redirect_button
-msgid "Attachment(s)"
-msgstr "Anhänge"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
-msgid "Activities Todo"
-msgstr "Zu erledigende Aktivitäten"
-
-#. module: web
-#. openerp-web
-#. module: web_settings_dashboard
-#. openerp-web
-#. module: web_enterprise
-#. openerp-web
-#: code:addons/web/static/src/js/core/dialog.js
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml
-#, python-format
-msgid "Odoo"
-msgstr "Emanju"
-
-#. module: mail
-#. openerp-web
-#: code:addons/mail/data/mail_activity_data.xml:9
-#, python-format
-msgid "Call"
-msgstr "Anrufen"
-
-#. module: mail
-#. openerp-web
-#: code:addons/mail/data/mail_activity_data.xml:18
-#, python-format
-msgid "Todo"
-msgstr "Aufgabe"
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-13 18:20+0000\n"
+"PO-Revision-Date: 2018-05-13 18:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #. module: emanju_base_enhancements
-#. openerp-web
-#: code:addons/models/users.py:14
-#, python-format
-msgid ""
-"Policy on how to handle Chatter notifications:\n"
+#: model:mail.template,body_html:emanju_base_enhancements.email_template_crm_inhancment
+msgid "\n"
+"            <p>\n"
+"				Dear All,\n"
+"			</p><br/>\n"
+"            <p>\n"
+"                Glad to kick-off a meeting with very committed and professional team members like you, hope we can collaborate together to achieve the goals, learn from each other and add a great value to the product and the organization.</p>"
+msgstr "\n"
+"            <p>\n"
+"				Dear All,\n"
+"			</p><br/>\n"
+"            <p>\n"
+"                Glad to kick-off a meeting with very committed and professional team members like you, hope we can collaborate together to achieve the goals, learn from each other and add a great value to the product and the organization.</p>"
+
+
+#. module: emanju_base_enhancements
+#: model:ir.model.fields,field_description:emanju_base_enhancements.field_res_users_calendar_notification_type
+msgid "Calendar Notification"
+msgstr "Einladungsbenachrichtigung"
+
+
+#. module: emanju_base_enhancements
+#: selection:res.users,calendar_notification_type:0
+msgid "Off"
+msgstr "Aus"
+
+#. module: emanju_base_enhancements
+#: selection:res.users,calendar_notification_type:0
+msgid "On"
+msgstr "Ein"
+
+#. module: emanju_base_enhancements
+#: model:ir.model.fields,help:emanju_base_enhancements.field_res_users_calendar_notification_type
+msgid "Policy on how to handle Chatter notifications:\n"
 "- On: Enable to receive messages in the inbox for new meeting invitations)\n"
 "- Off: Disable to receive messages in the inbox for new meeting invitations)"
-msgstr ""
-"Einstellung für Benachrichtigungen:\n"
+msgstr "Einstellung fÃ¼r Benachrichtigungen:\n"
 "- Ein: Benachrichtigung erhalten wenn Sie zu einem neuen Termin eingeladen werden\n"
 "- Aus: Eine Benachrichtigung erhalten, wenn Sie zu einem neuen Termin eingeladen werden. Trotzdem sehen Sie diesen neuen Termin wie gewohnt in Ihrem Kalender."
+
+#. module: emanju_base_enhancements
+#: model:ir.model.fields,field_description:emanju_base_enhancements.field_calendar_event_template_id
+msgid "Template"
+msgstr "Vorlage"
+
+^
+
