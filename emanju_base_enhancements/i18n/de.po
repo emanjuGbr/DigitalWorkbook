@@ -1,7 +1,20 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"X-Generator: Poedit 2.0.7\n"
+
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * mail
-# 
+#
 # Translators:
 # Bhavesh Odedra <odedra@emanju.de>, 2018
 #. module: mail
@@ -9,7 +22,7 @@
 #: code:addons/mail/static/src/xml/activity.xml:77
 #, python-format
 msgid "Done & Schedule Next"
-msgstr "Erledigt und FolgeaktivitÃ¤t planen"
+msgstr "Erledigt und Folgeaktivität planen"
 
 #. module: calendar
 #: model:ir.ui.view,arch_db:calendar.view_calendar_event_form
@@ -21,7 +34,7 @@ msgstr "Zum Auftrag"
 #: model:ir.ui.menu,name:crm.crm_menu_root
 #: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "CRM"
-msgstr "AuftrÃ¤ge"
+msgstr "Aufträge"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.mail_activity_view_form_popup
@@ -42,52 +55,30 @@ msgstr "Neue Nachricht"
 #: code:addons/mail/static/src/xml/client_action.xml:11
 #, python-format
 msgid "Odoo needs your permission to"
-msgstr "emanju benÃ¶tigt Erlaubnis fÃ¼r"
-
+msgstr "Emanju benötigt Erlaubnis für"
 
 #. module: od_crm_contacts_onedrive
 #: model:ir.ui.view,arch_db:od_crm_contacts_onedrive.crm_case_form_view_oppor_onedrive_redirect_button
 #: model:ir.ui.view,arch_db:od_crm_contacts_onedrive.view_partner_form__onedrive_redirect_button
 msgid "Attachment(s)"
-msgstr "AnhÃ¤nge"
-
+msgstr "Anhänge"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Activities Todo"
-msgstr "AktivitÃ¤ten To-Do"
-
-#. module: mail
-#. openerp-web
-#: code:addons/mail/static/src/xml/client_action.xml
-#: code:addons/mail/static/src/js/chat_manager.js
-#: code:addons/mail/static/src/xml/thread.xml
-#, python-format
-msgid "New messages"
-msgstr "Neue Nachricht"
+msgstr "Zu erledigende Aktivitäten"
 
 #. module: web
 #. openerp-web
-#: code:addons/web/static/src/js/core/dialog.js
-#, python-format
-msgid "Odoo"
-msgstr "emanju"
-
-
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml
-#, python-format
-msgid "Odoo"
-msgstr "emanju"
-
 #. module: web_enterprise
 #. openerp-web
+#: code:addons/web/static/src/js/core/dialog.js
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml
 #, python-format
 msgid "Odoo"
-msgstr "emanju"
-
+msgstr "Emanju"
 
 #. module: mail
 #. openerp-web
@@ -96,7 +87,6 @@ msgstr "emanju"
 msgid "Call"
 msgstr "Anrufen"
 
-
 #. module: mail
 #. openerp-web
 #: code:addons/mail/data/mail_activity_data.xml:18
@@ -104,15 +94,15 @@ msgstr "Anrufen"
 msgid "Todo"
 msgstr "Aufgabe"
 
-
 #. module: emanju_base_enhancements
 #. openerp-web
 #: code:addons/models/users.py:14
 #, python-format
-msgid "Policy on how to handle Chatter notifications:\n"
-             "- On: Enable to receive messages in the inbox for new meeting "
-             "invitations)\n"
-             "- Off: Disable to receive messages in the inbox for new meeting "
-             "invitations)"
-msgstr "Richtlinie wie Benachrichtigungen gehandhabt werde...."
-
+msgid ""
+"Policy on how to handle Chatter notifications:\n"
+"- On: Enable to receive messages in the inbox for new meeting invitations)\n"
+"- Off: Disable to receive messages in the inbox for new meeting invitations)"
+msgstr ""
+"Einstellung für Benachrichtigungen:\n"
+"- Ein: Benachrichtigung erhalten wenn Sie zu einem neuen Termin eingeladen werden\n"
+"- Aus: Eine Benachrichtigung erhalten, wenn Sie zu einem neuen Termin eingeladen werden. Trotzdem sehen Sie diesen neuen Termin wie gewohnt in Ihrem Kalender."
