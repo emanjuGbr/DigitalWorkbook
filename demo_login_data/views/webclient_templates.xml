@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+     <template id="web.loginnhancement" name="web login" inherit_id="web.login">
+        <xpath expr="//div[contains(@class,'field-password')]" position="after">
+            <div class="form-group">
+                <div> <strong> Demo Login: </strong><br/>
+                  E-Mail: chef@emanju.de <br/>
+                  Passwort: chef
+              </div>
+          </div>
+      </xpath>
+  </template>
+</data>
+</odoo>
