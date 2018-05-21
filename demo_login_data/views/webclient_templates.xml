@@ -1,6 +1,6 @@
 <odoo>
     <data>
-     <template id="web.loginnhancement" name="web login" inherit_id="web.login">
+     <template id="web.loginDemoData" name="web login" inherit_id="web.login">
         <xpath expr="//div[contains(@class,'field-password')]" position="after">
             <div class="form-group">
                 <div> <strong> Demo Login: </strong><br/>
