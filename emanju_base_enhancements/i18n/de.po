@@ -106,13 +106,29 @@ msgstr "Aufgabe"
 
 
 #. module: emanju_base_enhancements
-#. openerp-web
-#: code:addons/models/users.py:14
-#, python-format
-msgid "Policy on how to handle Chatter notifications:\n"
-             "- On: Enable to receive messages in the inbox for new meeting "
-             "invitations)\n"
-             "- Off: Disable to receive messages in the inbox for new meeting "
-             "invitations)"
-msgstr "Richtlinie wie Benachrichtigungen gehandhabt werde...."
+#: model:ir.model.fields,help:emanju_base_enhancements.field_res_users_calendar_notification_type
+msgid ""
+"Policy on how to handle Chatter notifications:\n"
+"- On: Enable to receive messages in the inbox for new meeting invitations)\n"
+"- Off: Disable to receive messages in the inbox for new meeting invitations)"
+msgstr ""
+"Einstellung für Benachrichtigungen:\n"
+"- Ein: Benachrichtigung erhalten wenn Sie zu einem neuen Termin eingeladen werden\n"
+"- Aus: Eine Benachrichtigung erhalten, wenn Sie zu einem neuen Termin eingeladen werden. Trotzdem sehen Sie diesen neuen Termin wie gewohnt in Ihrem Kalender."
+
+#. module: emanju_base_enhancements
+#: model:ir.model.fields,field_description:emanju_base_enhancements.field_res_users_calendar_notification_type
+msgid "Calendar Notification"
+msgstr "Einladungsbenachrichtigung"
+
+#. module: emanju_base_enhancements
+#: selection:res.users,calendar_notification_type:0
+msgid "Off"
+msgstr "Aus"
+
+#. module: emanju_base_enhancements
+#: selection:res.users,calendar_notification_type:0
+msgid "On"
+msgstr "Ein"
+
 
