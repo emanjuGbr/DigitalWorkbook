@@ -42,12 +42,12 @@
     </template>
 
 
-    <template id="layout" name="Web Layout" inherit_id="web.layout">
+    <template id="layout" name="Web Layout" inherit_id="web.layout" priority="100">
         <xpath expr="//title" position="replace">
             <title t-esc="title or 'emanju'"/>
         </xpath>
         <xpath expr="//link" position="replace">
-             <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or '/web/static/src/img/favicon.ico'"/>
+             <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or '/emanju_branding/static/src/img/favicon.png'"/>
         </xpath>
     </template>
 </odoo>
