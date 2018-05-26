@@ -2,3 +2,8 @@
 	path = OCA/reporting-engine
 	url = git@github.com:OCA/reporting-engine.git
 	branch = 11.0
+
+[submodule "akretion/odoo-py3o-report-templates"]
+	path = akretion/odoo-py3o-report-templates
+	url = git@github.com:akretion/odoo-py3o-report-templates.git
+	branch = 10.0
