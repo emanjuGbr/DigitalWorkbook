@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<!-- Front Web Page Setup -->
+<t t-name="AppSwitcher.Content">
+    <div t-if="widget.state.apps.length" class="o_apps">
+        <t t-set="focused_app_index" t-value="widget.get_app_index()"/>
+        <t t-foreach="widget.state.apps" t-as="app">
+          <a
+            t-att-class="'o_app o_menuitem' + ((focused_app_index === app_index)? ' o_focused' : '')"
+            t-att-data-menu="app.id"
+            t-att-data-action-model="app.action ? app.action.split(',')[0] : ''"
+            t-att-data-action-id="app.action"
+            t-att-data-menu-xmlid="app.xmlid"
+            t-att-href="app.href ? app.href : ('#menu_id='+app.id+'&amp;action_id='+app.action)">
+            <div t-if="app.web_icon_data" class="o_app_icon"
+                t-attf-style="background-image: url('#{app.web_icon_data}');"/>
+            <div t-else="" class="o_app_icon"
+                t-attf-style="background-color: #{app.web_icon.background};">
+                <i t-att-class="app.web_icon.class" t-attf-style="color: #{app.web_icon.color};"/>
+            </div>
+            <div class="o_caption"><t t-esc="app.label"/></div>
+          </a>
+        </t>
+    </div>
+    <div t-if="widget.state.menu_items.length" class="o_menuitems">
+        <t t-set="focused_menu_index" t-value="widget.get_menu_index()"/>
+        <t t-foreach="widget.state.menu_items" t-as="menu">
+            <a
+              t-att-class="'o_menuitem' + ((focused_menu_index === menu_index)? ' o_focused' : '')"
+              t-att-href="menu.href ? menu.href : ('#menu_id='+menu.id+'&amp;action_id='+menu.action)"
+              t-att-data-menu="menu.id">
+                  <t t-esc="menu.label"/>
+            </a>
+        </t>
+    </div>
+    <t t-if="widget.state.apps.length + widget.state.menu_items.length === 0">
+        <div class="o_no_result">No result</div>
+    </t>
+    <div class="o_application_switcher_footer">
+        <img src="/emanju/static/src/img/logo.svg" style="width: 200px;"/>
+    </div>
+</t>
+
+<!-- Hide options from Admin dropdown (Documentation, Support, My Odoo.com account) -->
+<t t-name="UserMenu.Actions">
+    <li class="divider"/>
+    <li><a href="#" data-menu="settings">Preferences</a></li>
+    <li><a href="#" data-menu="logout">Log out</a></li>
+</t>
+
+</templates>

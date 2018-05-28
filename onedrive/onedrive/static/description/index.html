@@ -1,0 +1,160 @@
+<!-- Description -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan" style="color:#428bca">
+                Odoo OneDrive Integration
+            </h2>
+            <h3 class="oe_slogan" style="color:#428bca">
+                Keep Odoo attachments into the file-hosting service OneDrive
+            </h3>
+        </div>
+        <div class="oe_span12">
+            <p class="oe_mt32">
+                This Odoo tool manages an automatic synchronization between Odoo documents and OneDrive files.
+            </p>
+            <p class="oe_mt32">
+                Deals with documents in Odoo have not changed but now the attachments are hierarchically stored in one cloud. Thus, you can manages them into the cloud.
+            </p>
+            <h4 class="oe_slogan oe_mt32" style="color:#428bca">
+                Features
+            </h4>
+            <p class="oe_mt32">
+                <ul>
+                    <li class="oe_mt16">
+                        The files are kept systematically and create a convinient system in the cloud. You always can find a required attachment by path in OneDrive: Files > Odoo > Model's name > Object's name > Document. For example, "Files / Odoo /  Sales Order / SO007 7 / workstation.png".
+                    </li>
+                    <li class="oe_mt16">
+                        Files are synchronized <strong>automatically</strong>: you may choose time and interval
+                    </li>
+                    <li class="oe_mt16">
+                        Synchronization is <strong>bilateral</strong>. In addition to the fact that Odoo documents are placed to the cloud, you can add or create a file directly in OneDrive. After synchronization new files will be attached to object according to its path in OneDrive.
+                    </li>
+                    <li class="oe_mt16">
+                        Synced attachment in Odoo opens via URL to OneDrive file. Thus, document <strong>preview</strong> depends on OneDrive configurations. For instance, if you use Office 365, the files will be opened immediately in the right editor, such as Word or Excel.
+                    </li>
+                    <li class="oe_mt16">
+                        You can update documents by clicking the buttons on Odoo side at any time you want.
+                    </li>
+                    <li class="oe_mt16">
+                        The application supports accounts OneDrive for business and sharepoint sites.
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 oe_spaced">
+            <h4 class="oe_slogan" style="color:#428bca">
+                Odoo OneDrive Synchronization
+            </h4>
+            <div class="oe_demo oe_screenshot oe_mt16">
+                <img alt="Documents Synchronization" src="onedrive_sync.png"/>
+            </div>
+        </div>
+        <div class="oe_span12 oe_spaced">
+            <h4 class="oe_slogan" style="color:#428bca">
+                Buttons for synchronization
+            </h4>
+            <div class="oe_demo oe_screenshot oe_mt16">
+                <img alt="Click on buttons to update file to and from OneDrive" src="buttons_for_sync.png"/>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan" style="color:#428bca">
+                Installation and configuration
+            </h3>
+        </div>
+        <div class="oe_span12">
+            <p class="oe_mt32">
+                To configure the synchronization you need to go to Settings menu and enter the OneDrive Client Id and Secret Key:
+            </p>
+            <ul>
+                <li class="oe_mt16">
+                    Go to <a href="https://apps.dev.microsoft.com/?referrer=https%3A%2F%2Fdev.onedrive.com">the OneDrive Application page</a> and sign in with your account.
+                </li>
+                <li class="oe_mt16">
+                    Add new Application: specify a name and create an application.
+                </li>
+                <li class="oe_mt16">
+                    Then you can see Application Id of your account. Use it for Client Id.
+                </li>
+                <li class="oe_mt16">
+                    Add new Web platform and allow implicit flow. The Redirect URL is your Odoo's instance URL with '/one_drive_token' in the end.
+                </li>
+                <li class="oe_mt16">
+                    Check 'Live SDK support'.
+                </li>
+                <li class="oe_mt16">
+                    After that generate new password and use it for Secret Key.
+                </li>
+                <li class="oe_mt16">
+                    Put the Client Id and Secret Key into OneDrive Settings. You also may configurate authorization for OneDrive for business account.
+                </li>
+            </ul>
+            <p class="oe_mt32">
+                By clicking on the button 'Login and Confirm' for first time, it will be offered to authorize the user whose cloud will be synchronized. Then after successful authorization, the synchronization buttons will appear.
+            </p>
+            <p class="oe_mt32">
+                Moreover, you can reset the configuration setting, but be cautious: only future documents will be placed in the new directory, all previously added files will be stored in the old directory.
+            </p>
+            <p class="oe_mt32">
+                Crons for automatic synchronization are 'Synchronize attachments with cloud' and 'Update attachments from OneDrive are placed in Settings > Technical > Automation > Scheduled Actions.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 oe_spaced">
+            <h4 class="oe_slogan" style="color:#428bca">
+                OneDrive integration setting
+            </h4>
+            <div class="oe_demo oe_screenshot oe_mt16">
+                <img alt="OneDrive integration setting" src="onedrive_settings.png"/>
+            </div>
+        </div>
+        <div class="oe_span12 oe_spaced">
+            <h4 class="oe_slogan" style="color:#428bca">
+                Crons for OneDrive automatic synchronization
+            </h4>
+            <div class="oe_demo oe_screenshot oe_mt16">
+                <img alt="Specify time and interval of OneDrive automatic synchronization" src="cron_for_sync.png"/>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Recomendations -->
+
+<!-- About us -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">Support Info</h2>
+        </div>
+        <div class="oe_span12 oe_mt16 oe_centeralign">
+            <ul style='list-style:None'>
+                <li class="oe_mt16">
+                    <big><big>
+                        <a href="https://odootools.com/page/website.contactus"><i class="fa fa-bell-o"></i> Contact us for bug fixing</a>
+                    </big></big>
+                </li>
+                <li class="oe_mt16">
+                    <big><big>
+                        <a href="https://odootools.com/odoo-wishlist"><i class="fa fa-heart"></i> Request new app features (wishlist)</a>
+                    </big></big>
+                </li>
+                <li class="oe_mt16">
+                    <big><big>
+                        <a href="https://odootools.com/"><i class="fa fa-wrench"></i> About developers</a>
+                    </big></big>
+                </li>
+            </ul>
+        </div>
+    </div>

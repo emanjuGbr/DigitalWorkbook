@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Copyright 2018 Emanju.de
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+    <!-- CRM form view -->
+    <record id="crm_case_form_view_oppor_onedrive_redirect_button" model="ir.ui.view">
+        <field name="name">crm.lead.form.opportunity</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <!-- Add Attachments button -->
+            <button name="action_set_won" position="before">
+                <button name="redirect_onedrive_folder" string="Anhänge" type="object" class="oe_highlight"/>
+            </button>
+        </field>
+    </record>
+</odoo>
