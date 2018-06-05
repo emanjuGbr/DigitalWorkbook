@@ -16,7 +16,6 @@
         "views/mail_templates_chatter.xml",
         "views/mail_compose_message.xml",
         "views/calendar_view.xml",
-        "views/res_users_view.xml",
         "wizard/mail_compose_message_view.xml",
     ],
     "installable": True,

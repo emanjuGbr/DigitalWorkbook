@@ -3,5 +3,4 @@
 from . import crm
 from . import partner
 from . import mail
-from . import users
 from . import calendar
