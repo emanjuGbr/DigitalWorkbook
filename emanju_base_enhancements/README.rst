@@ -16,7 +16,6 @@ Requirements
 - Requirement 010: Internal followers only
 - Requirement 019: Regional settings for new contacts
 - Requirement 012: Pop-Up Window for editing E-Mails
-- Requirement 007: Notification for meeting invitation
 - Requirement 025: Templates for meetings
 
 Installation
