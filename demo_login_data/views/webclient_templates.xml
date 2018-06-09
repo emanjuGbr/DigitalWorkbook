@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+     <template id="web_login_demo_data" name="web login demo data" inherit_id="web.login">
+        <xpath expr="//div[3]" position="after">
+            <div class="form-group">
+                <div> <strong> Demo Login: </strong><br/>
+                  E-Mail: chef@emanju.de <br/>
+                  Passwort: chef
+              </div>
+          </div>
+      </xpath>
+  </template>
+</data>
+</odoo>
