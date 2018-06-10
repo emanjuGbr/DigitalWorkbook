@@ -1,0 +1,3 @@
+[submodule "DigitalWorkbook-Community"]
+	path = DigitalWorkbook-Community
+	url = git@github.com:emanjuGbr/DigitalWorkbook-Community.git
